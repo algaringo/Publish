@@ -1,1 +1,3 @@
-web: gunicorn Project2.wsgi
+web: gunicorn auctionsbyangelu.wsgi:application --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
