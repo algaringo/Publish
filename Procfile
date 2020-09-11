@@ -1,1 +1,2 @@
-web: gunicorn pp:app
+release: python manage.py migrate
+web: gunicorn commerce.wsgi --log-file -
